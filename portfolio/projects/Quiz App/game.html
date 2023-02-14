@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <title>Quiz App </title>
+</head>
+
+<body>
+    <div class="head-up-display">
+        <div class="questionContainer">
+            <div class="progressBar">
+                <div id="progressBarFull"><span id="questionDisplays">0/1</span></div>
+            </div>
+        </div>
+        <div class="scoreContainer">
+            <p id="scoredisplay">0</p>
+        </div>
+    </div>
+    <div class="container">
+        <h1 id="question">what is the question of this answer ! </h1>
+        <div class="choice_container">
+            <div class="choice">
+                <span class="choice_prefix">a</span>
+                <p class="choices_text" data-number="1" class="incorrect"> </p>
+            </div>
+            <div class="choice">
+                <span class="choice_prefix">b</span>
+                <p class="choices_text" data-number="2"></p>
+            </div>
+            <div class="choice">
+                <span class="choice_prefix">c</span>
+                <p class="choices_text" data-number="3"></p>
+            </div>
+            <div class="choice">
+                <span class="choice_prefix">d</span>
+                <p class="choices_text" data-number="4"></p>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>

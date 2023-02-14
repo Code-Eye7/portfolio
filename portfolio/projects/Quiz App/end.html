@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('backGround/08.jpg');
+            background-size: cover;
+            /* background-position: 100% 100%; */
+        }
+
+        .btn {
+            padding: 20px;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+            width: 100%;
+            color: orangered;
+            font-weight: 900;
+            text-transform: capitalize;
+            letter-spacing: 3px;
+            background: rgb(0, 39, 0);
+            border-radius: 25px;
+        }
+
+        form {
+            /* border: 2px red dotted; */
+            flex: 0 0 100%;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: rgb(0, 39, 0);
+            font-size: 20px;
+            text-align: center;
+        }
+
+        input:focus {
+            /* border: none; */
+            outline: none;
+            color: rgb(12, 99, 0);
+            /* font-weight: 900; */
+            /* font-size: 18px; */
+            /* letter-spacing: 4px; */
+        }
+
+        button:disabled {
+            background-color: #939090 !important;
+            color: rgb(100, 97, 97);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10% auto;
+            width: 250px;
+            background: rgba(0, 0, 0, 0.103);
+            border-radius: 9px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        p {
+            width: 100%;
+            margin-bottom: -50px;
+        }
+
+        h1 {
+            margin-top: 70px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .container * {
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>score</p>
+        <h1 id="finalScore"></h1>
+        <form action="">
+            <input type="text" id="userName" class="username" placeholder="enter your name">
+            <button type="submit" id="saveHighScoreBtn" disabled class="btn" onclick="saveHighScore(event)">Save
+            </button>
+        </form>
+        <a href="game.html" class="btn">play again </a>
+        <a href="index.html" class="btn">go to home </a>
+        <br>
+        <br>
+    </div>
+    <script src="end.js"></script>
+</body>
+
+</html>

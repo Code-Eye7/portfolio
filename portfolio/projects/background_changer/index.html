@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backgorund color changer</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0;
+        }
+
+        body {
+            padding: 10px 60px;
+        }
+
+        h1 {
+            text-align: center;
+            text-transform: capitalize;
+            margin-bottom: 10%;
+        }
+
+        img {
+            width: 50%;
+            height: 600px;
+            /* border-radius: 50%; */
+            position: relative;
+            top: 10%;
+            margin-bottom: 5%;
+            left: 50%;
+            z-index: -1;
+            transform: translate(-50%) rotate(-90deg);
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        .color_switcher {
+            text-align: right;
+        }
+
+        .btn {
+            height: 25px;
+            width: 25px;
+            display: inline-block;
+            border: 3px solid gray;
+            border-radius: 50%;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #white {
+            background: #ffffff;
+        }
+
+        #aqua {
+            background: #00ffff;
+        }
+
+        #violet {
+            background: #ee82ee;
+        }
+
+        #black {
+            background: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="color_switcher">
+        <span class="btn" id="white" onclick="changbg('white')"></span>
+        <span class="btn" id="aqua" onclick="changbg('aqua')"> </span>
+        <span class="btn" id="violet" onclick="changbg('violet')"></span>
+        <span class="btn" id="black" onclick="changbg('black')"></span>
+    </div>
+    <h1 class="text" id="heading">backgorund color changer </h1>
+    <img src="img.jpg" alt="">
+    <p class="text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus reiciendis aspernatur, mollitia,
+        blanditiis earum quod aut corrupti possimus dolorum assumenda labore, cum ipsam tenetur omnis eos libero ab quo.
+        Est soluta iste architecto beatae. Cumque iste praesentium beatae, accusamus commodi laborum, reprehenderit
+        necessitatibus fugiat temporibus soluta accusantium? Natus praesentium molestiae porro, deserunt aliquam, non
+        neque eaque ullam laboriosam reiciendis libero officiis ratione? Quod molestias laborum enim rem reprehenderit?
+        Dignissimos assumenda odio facilis natus atque asperiores nam quasi vero consequatur, at obcaecati. Ut ab iure
+        voluptates, inventore quia magnam voluptatum assumenda asperiores dicta magni sequi officiis odio distinctio
+        neque, ducimus doloribus iste, possimus molestias? Odio nemo voluptate molestiae esse amet, a aspernatur
+        repellat ipsum vero mollitia quibusdam, animi ratione iusto impedit nam magni? Dignissimos iste ratione deserunt
+        ab corporis laboriosam excepturi rem enim eveniet voluptate neque repellendus, soluta deleniti aut itaque
+        laudantium pariatur fugiat tenetur unde nisi laborum. Voluptatem nobis error tempore porro ut iure molestias
+        distinctio, dolorum dolor modi, minus placeat, veniam maxime totam illo eligendi provident sed quas. Maiores
+        quia odio doloribus error obcaecati blanditiis consequatur porro eaque in neque? Quisquam eaque voluptatibus
+        repellat sint ullam neque quas autem error aliquid vel? Beatae reprehenderit a distinctio, odit totam minima
+        molestiae architecto dolorem eos praesentium suscipit? Inventore quis dicta earum veritatis quam reiciendis eum
+        praesentium aspernatur deserunt labore, illo sunt deleniti? Corrupti doloribus tenetur dignissimos vitae.
+        Praesentium corporis unde tempore vero ea ipsam eligendi temporibus ex consequuntur, animi et nam. Beatae
+        nesciunt ut expedita non perferendis consequuntur nam, quam quidem esse aliquid? Aliquid molestiae accusantium
+        nihil, ducimus, itaque adipisci sed, nesciunt quaerat velit quis animi aut est ea unde illum. Quod aliquam saepe
+        quidem quam, alias praesentium id rem quae magni sint sit. Eum esse aspernatur praesentium eligendi mollitia
+        rerum provident accusantium repellat officiis delectus doloribus eaque ea voluptatum blanditiis at inventore, et
+        animi aperiam soluta magni perspiciatis. Iusto, tempore dolores neque voluptatum esse cupiditate delectus
+        aliquid minus, ad sed modi beatae. Sint recusandae, itaque modi rerum, nostrum adipisci amet fugit nobis eaque
+        debitis odio non ullam dicta necessitatibus fuga id, totam impedit voluptas animi alias. Nihil culpa qui veniam
+        ad reiciendis? Qui doloremque consequatur aliquam. Consequatur deleniti soluta odit beatae itaque aliquam
+        tempore sint consequuntur quam qui, vero voluptatum eveniet numquam ipsum distinctio unde autem ab nam excepturi
+        eum obcaecati placeat, expedita debitis! Unde sit nostrum itaque natus, delectus inventore aliquam esse
+        repellendus illum aut quidem ullam iure voluptate error! Numquam saepe, nesciunt hic maiores vel eum molestias
+        corrupti omnis ipsum neque corporis natus tenetur, velit voluptates exercitationem facere officiis, aperiam
+        alias quae expedita nihil repellat adipisci! Consequatur dignissimos consequuntur laudantium ad nam nostrum
+        labore, ab blanditiis dolorum soluta aut eveniet fugit excepturi laboriosam quod eaque aspernatur. Velit, illo?
+        Ad repellat veritatis illo quod maxime? Quibusdam ratione quaerat iure debitis maxime! Quam eos dicta nemo
+        beatae odit, nostrum consectetur aperiam fugiat odio iste ipsam? Sit velit voluptatum commodi, delectus placeat
+        nihil aliquam voluptas quaerat beatae amet optio itaque perferendis nulla quis sed non nesciunt quos, ratione,
+        debitis illo temporibus? </p>
+    <script>
+        function changbg(color) {
+            document.body.style.background = color;
+            // to change text color in black/white mode 
+            let allbodytext = document.getElementsByClassName('text');
+
+            if (color == 'black') {
+                for (let elm of allbodytext) {
+                    elm.style.color = "gray"
+                }
+            }
+            else {
+                for (let elm of allbodytext) {
+                    elm.style.color = "black";
+                }
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

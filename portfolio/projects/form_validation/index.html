@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>form validation</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>login</h2>
+        <form action="" onsubmit="return formvalidation()">
+            <input type="text" id="username"> <br>
+            <p id="usererror"></p>
+            <input type="password" id="password"> <br>
+            <p id="passerror"></p>
+            <input type="submit">
+        </form>
+    </div>
+    <script>
+        let password = document.getElementById('password');
+
+        let username = document.getElementById('username');
+        // jab flag [1] to form submit huga or agar flag [0] ho nahi huga
+        let flag = 1;
+        function formvalidation() {
+            if (username.value == "") {
+                document.getElementById('usererror').innerHTML = "user name is empty "
+                flag = 0;
+            } else if (username.value.length < 3) {
+                document.getElementById('usererror').innerHTML = "user name required min 3 character";
+                flag = 0;
+            }
+
+            else {
+                document.getElementById('usererror').innerHTML = "";
+                flag = 1;
+            }
+            if (password.value == "") {
+                document.getElementById('passerror').innerHTML = "password is empty ";
+                flag = 0;
+            }
+            else {
+                document.getElementById('passerror').innerHTML = "";
+                flag = 1;
+            }
+
+            if (flag) {
+                return true;
+            }
+            else {
+                return false;
+            }
+
+        };
+
+
+    </script>
+</body>
+
+</html>

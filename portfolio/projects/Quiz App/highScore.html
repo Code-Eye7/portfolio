@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 200px;
+        }
+
+        ul li {
+            list-style: none;
+            margin: 5px;
+            border-radius: 25px;
+            padding: 7px 15px;
+            margin-left: -10%;
+            box-shadow: inset 2px 2px 15px rgba(70, 62, 62, 0.431);
+            font-size: 20px;
+            text-transform: capitalize;
+        }
+
+        .container a {
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            background: rgba(148, 147, 147, 0.419);
+            padding: 5px 10px;
+            width: 90%;
+            margin: auto;
+            border-radius: 50px;
+            font-size: 20px;
+            color: rgb(1, 59, 1);
+            font-weight: 900;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul id="scoreListDisplay"></ul>
+        <a href="game.html">play again</a>
+    </div>
+    <script src="highScore.js"></script>
+</body>
+
+</html>
